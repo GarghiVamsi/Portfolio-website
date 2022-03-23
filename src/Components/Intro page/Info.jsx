@@ -12,7 +12,7 @@ const Info = () => {
                         <div className="info-title-item"> Bachelor's in Computer Science</div>
                         <div className="info-title-item"> Data Analyst @ cognizant techonologies</div>
                         <div className="info-title-item"> Avid basketball player</div>
-                        <div className="info-title-item"> Love Anime</div>
+                        <div className="info-title-item"> Love life</div>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@ const Info = () => {
                 </div>
             </div>
             </div>
-            <div className="info-Right"> Right</div>
+            <div className="info-Right"> Righasdasdt</div>
         </div> 
     )
 }

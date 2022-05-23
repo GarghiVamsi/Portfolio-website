@@ -1,7 +1,6 @@
 .info {
   display: flex;
   height: 50vh;
-  background-color: bisque;
 }
 
 .info-Left {
@@ -24,4 +23,9 @@
 .info-name {
   font-style: italic;
   font-size: 50px;
+}
+
+.info-title-button {
+  font-style: italic;
+  font-size: large;
 }

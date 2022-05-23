@@ -1,4 +1,5 @@
 import "./info.css"
+import Button from '@mui/material/Button';
 
 const Info = () => {
     return (
@@ -13,6 +14,9 @@ const Info = () => {
                         <div className="info-title-item"> Data Analyst @ cognizant techonologies</div>
                         <div className="info-title-item"> Avid basketball player</div>
                         <div className="info-title-item"> Love life</div>
+                            <div className="info-title-button">
+                            <Button variant="outlined">Click on me!</Button>
+                            </div>
                     </div>
                 </div>
             </div>

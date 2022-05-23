@@ -17,6 +17,9 @@ const Info = () => {
                         <div className="info-title-item"> Love life</div>
                     </div>
                 </div>
+                <div className="info-desc">
+                    An avid data analyst and data engineer with tools and skills in ETL development and cloud
+                </div>
             </div>
             </div>
             <div className="info-Right"> Right</div>

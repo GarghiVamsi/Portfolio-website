@@ -1,19 +1,26 @@
 .info {
   display: flex;
   height: 50vh;
-  /* background-color: peachpuff; */
+  background-color: peachpuff;
 }
 
 .info-Left {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .info-Right {
   flex: 1;
 }
 
-.info-left-padding {
+.info-left-wrapper {
   padding: 100px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .info-welcome {
@@ -55,7 +62,7 @@
   height: 50px;
   font-size: 30px;
   font-weight: bold;
-  color: black;
+  color: blueviolet;
   display: flex;
   align-items: center;
 }

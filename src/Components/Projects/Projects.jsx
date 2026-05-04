@@ -47,7 +47,7 @@ export default function Projects() {
           My <span className="gradient-text">Projects</span>
         </h2>
         <p className="projects__subtitle">
-          Open-source work pulled live from GitHub — {repos.length} repositories and counting.
+          A selection of open-source work pulled live from GitHub.
         </p>
       </motion.div>
 

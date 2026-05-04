@@ -90,10 +90,6 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          <motion.p className="hero__greeting" variants={itemVariants}>
-            Hello, welcome to my webpage!
-          </motion.p>
-
           <motion.h1 className="hero__name" variants={itemVariants}>
             My name is{' '}
             <span className="gradient-text">Vamsi Garghi</span>

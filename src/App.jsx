@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
 import Projects from './Components/Projects/Projects';
+import Experience from './Components/Experience/Experience';
 import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
 
@@ -23,6 +24,9 @@ function App() {
       <main>
         <section id="home">
           <Hero />
+        </section>
+        <section id="experience">
+          <Experience />
         </section>
         <section id="projects">
           <Projects />

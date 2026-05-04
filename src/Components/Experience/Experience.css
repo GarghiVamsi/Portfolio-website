@@ -1,0 +1,313 @@
+.experience {
+  padding: 6rem 2.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.experience__header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.experience__title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+}
+
+.experience__subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── Timeline ── */
+.experience__timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.experience__timeline::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent) 0%,
+    var(--accent2) 60%,
+    transparent 100%
+  );
+  opacity: 0.4;
+}
+
+/* ── Entry ── */
+.exp-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 1.4rem;
+  padding-bottom: 2.4rem;
+}
+
+.exp-entry:last-child {
+  padding-bottom: 0;
+}
+
+.exp-entry__dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Card ── */
+.exp-entry__card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.4rem 1.6rem;
+  transition: border-color 0.25s ease;
+}
+
+.exp-entry__card:hover {
+  border-color: var(--accent);
+}
+
+/* ── Top row: header + date ── */
+.exp-entry__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.exp-entry__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.exp-entry__company {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.exp-entry__role {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.exp-entry__location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 1px;
+}
+
+/* ── Date badge ── */
+.exp-date {
+  flex-shrink: 0;
+}
+
+.exp-date__range {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1.5px solid var(--accent);
+  padding: 0.28rem 0.7rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+  white-space: nowrap;
+}
+
+.exp-date__sep {
+  opacity: 0.6;
+}
+
+.exp-date__present {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--terminal-green);
+}
+
+.exp-date__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--terminal-green);
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(57, 211, 83, 0.5); }
+  50%       { opacity: 0.8; box-shadow: 0 0 0 4px rgba(57, 211, 83, 0); }
+}
+
+/* ── Bullets ── */
+.exp-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding-left: 0.2rem;
+}
+
+.exp-bullet {
+  position: relative;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.65;
+  padding-left: 1.2rem;
+}
+
+.exp-bullet::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+/* Highlighted metrics */
+.exp-bullet mark {
+  background: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── Clients section ── */
+.exp-clients {
+  margin-top: 1.2rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.exp-clients__label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: -0.2rem;
+}
+
+/* ── Client entry ── */
+.exp-client {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent2);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+}
+
+.exp-client__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+
+.exp-client__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.exp-client__company {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.exp-client__industry {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+}
+
+.exp-client__date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--accent2);
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  padding: 0.18rem 0.55rem;
+  border-radius: 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.exp-client__role-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.exp-client__role {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.exp-client__location {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .experience {
+    padding: 4rem 1.2rem;
+  }
+
+  .exp-entry__top {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .exp-client__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

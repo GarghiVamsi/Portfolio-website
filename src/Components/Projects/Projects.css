@@ -1,0 +1,113 @@
+.projects {
+  padding: 6rem 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.projects__title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+}
+
+.projects__subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Filter chips */
+.projects__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.filter-chip {
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border: 1.5px solid var(--border);
+  color: var(--muted);
+  background: var(--surface);
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  font-family: inherit;
+}
+
+.filter-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-chip--active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+/* Grid */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.4rem;
+}
+
+/* Skeleton */
+.skeleton-card {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton-card__header,
+.skeleton-card__line {
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--surface2) 25%,
+    var(--border) 50%,
+    var(--surface2) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+.skeleton-card__header { height: 32px; width: 40%; }
+.skeleton-card__line   { height: 14px; }
+.skeleton-card__line--long  { width: 80%; }
+.skeleton-card__line--med   { width: 60%; }
+.skeleton-card__line--short { width: 40%; margin-top: 0.4rem; }
+
+/* Error */
+.projects__error {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem;
+}
+.projects__error a {
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .projects { padding: 4rem 1.2rem; }
+  .projects__grid { grid-template-columns: 1fr; }
+}

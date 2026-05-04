@@ -94,6 +94,7 @@ export default function Projects() {
                   animate="visible"
                   exit="exit"
                   layout
+                  style={{ height: '100%' }}
                 >
                   <ProjectCard repo={repo} />
                 </motion.div>

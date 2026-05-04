@@ -46,7 +46,7 @@ const itemVariants = {
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [status, setStatus] = useState('idle');
 
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
 

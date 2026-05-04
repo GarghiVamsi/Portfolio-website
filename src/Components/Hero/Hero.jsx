@@ -76,6 +76,7 @@ const itemVariants = {
 };
 
 export default function Hero() {
+
   return (
     <div className="hero">
       <div className="hero__glow hero__glow--1" />

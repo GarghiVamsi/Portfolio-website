@@ -1,0 +1,78 @@
+.ach-overlay {
+  position: fixed;
+  bottom: 1.6rem;
+  right: 1.6rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  pointer-events: none;
+  align-items: flex-end;
+}
+
+.ach-toast {
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 0.85rem 1rem 0.85rem 0.9rem;
+  min-width: 280px;
+  max-width: 320px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--accent-glow);
+  cursor: pointer;
+}
+
+.ach-toast__icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.ach-toast__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.ach-toast__label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.15rem;
+}
+
+.ach-toast__title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ach-toast__desc {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ach-toast__xp {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent2);
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+@media (max-width: 480px) {
+  .ach-overlay { right: 0.8rem; bottom: 0.8rem; }
+  .ach-toast { min-width: 240px; }
+}

@@ -7,6 +7,7 @@ const lines = [
   { prompt: false, text: 'vamsi_garghi — data analyst & engineer' },
   { prompt: true, text: 'cat education.txt' },
   { prompt: false, text: 'B.S. Computer Science' },
+  { prompt: false, text: 'M.S. Computer Science' },
   { prompt: true, text: 'skills --list' },
   { prompt: false, text: '→ Python · SQL · ETL · Cloud (AWS/Azure)' },
   { prompt: false, text: '→ Power BI · Tableau · Spark · Airflow' },

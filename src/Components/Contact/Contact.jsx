@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Contact.css';
 
-const FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
 
 const socials = [
   {
@@ -52,6 +52,7 @@ export default function Contact() {
 
   const handleSubmit = async e => {
     e.preventDefault();
+    if (!FORMSPREE_URL) return;
     setStatus('sending');
     try {
       const res = await fetch(FORMSPREE_URL, {
@@ -191,7 +192,7 @@ export default function Contact() {
                 key="submit"
                 type="submit"
                 className="btn btn--primary"
-                disabled={status === 'sending'}
+                disabled={status === 'sending' || !FORMSPREE_URL}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

@@ -11,6 +11,11 @@ const roles = [
   'Anime Enthusiast',
 ];
 
+const TYPING_SPEED = 65;
+const DELETE_SPEED = 35;
+const PAUSE_DURATION = 1400;
+const PRE_DELETE_DELAY = 200;
+
 function Typewriter({ text }) {
   const [displayed, setDisplayed] = useState('');
   const [phase, setPhase] = useState('typing'); // typing | pausing | deleting
@@ -19,15 +24,15 @@ function Typewriter({ text }) {
     let timeout;
     if (phase === 'typing') {
       if (displayed.length < text.length) {
-        timeout = setTimeout(() => setDisplayed(text.slice(0, displayed.length + 1)), 65);
+        timeout = setTimeout(() => setDisplayed(text.slice(0, displayed.length + 1)), TYPING_SPEED);
       } else {
-        timeout = setTimeout(() => setPhase('pausing'), 1400);
+        timeout = setTimeout(() => setPhase('pausing'), PAUSE_DURATION);
       }
     } else if (phase === 'pausing') {
-      timeout = setTimeout(() => setPhase('deleting'), 200);
+      timeout = setTimeout(() => setPhase('deleting'), PRE_DELETE_DELAY);
     } else if (phase === 'deleting') {
       if (displayed.length > 0) {
-        timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 35);
+        timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), DELETE_SPEED);
       } else {
         setPhase('typing');
       }
@@ -51,7 +56,7 @@ function TypewriterCycle() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const totalTime = roles[index].length * 65 + 1400 + roles[index].length * 35 + 400;
+    const totalTime = roles[index].length * TYPING_SPEED + PAUSE_DURATION + PRE_DELETE_DELAY + roles[index].length * DELETE_SPEED;
     const t = setTimeout(() => setIndex(i => (i + 1) % roles.length), totalTime);
     return () => clearTimeout(t);
   }, [index]);
